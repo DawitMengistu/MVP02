@@ -1,0 +1,11 @@
+<html>
+    <title>New Rental</title>
+    <body>
+        <div>
+        <img src="./Apart1.jpg" width="50%" height="10px" >
+        </div>
+        
+        
+    </body>
+    
+    </html>

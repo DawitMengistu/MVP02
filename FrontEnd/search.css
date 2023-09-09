@@ -1,0 +1,9 @@
+body {
+    
+}
+
+.container {
+    background-color: rgb(221, 206, 206);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

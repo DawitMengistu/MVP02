@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="rent.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <form>
+        <div class="container">
+            <div>
+                <label for="room" class="label-dropdown">room</label>
+                <select class="room">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="any">Any</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="type" class="label-dropdown">type</label>
+                <select class="dropdown">
+                    <option value="A">Apartment</option>
+                    <option value="C">Condominium</option>
+                    <option value="H">House</option>
+                    <option value="R">Realstate</option>
+                </select>
+            </div>
+
+            <!-- //location -->
+            <div>
+                <label for="type" class="location label-dropdown">type</label>
+                <select class="locationdropdown">
+                    <option value="addis">Addis Ababa</option>
+                    <option value="adama">Adama</option>
+                    <option value="jimma">Jimma</option>
+                    <option value="bishoftu">Bishoftu</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <div class="slider">
+                    <label for="Max price" class="label-dropdown">Price</label>
+
+                    <input type="range" min="1000" max="15000" value="20" class="input">
+                    <a class="value label-dropdown"> 1000 </a>
+                    <!-- <div class="inputNumber">
+                        <input type="number" class="inputnumber">
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div>
+                <button class="search" type="submit">Search</button>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="results-container-top">
+            <div class="results">
+
+            </div>
+        </div>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

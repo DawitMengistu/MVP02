@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+
+  <link rel="stylesheet" href="card.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="results-container">
+    <div class="results-container">
+      <div class="img-container">
+        <!-- <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="http://localhost:5000/images/h1.jpg" class="d-block w-100" alt="..." style="height: 100%;">
+            </div>
+            <div class="carousel-item">
+              <img src="http://localhost:5000/images/h1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="http://localhost:5000/images/h1.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> -->
+      </div>
+
+    </div>
+    <p class="location-city">Arba Minch,Ethiopia</p>
+    <p class="p-type">Property type<span class="p-type-gray"> Realstate</span></p>
+    <p class="price">900</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Create the main carousel container
+    const carouselContainer = document.createElement('div');
+    carouselContainer.id = 'carouselExample';
+    carouselContainer.classList.add('carousel', 'slide');
+
+    // Create the carousel inner container
+    const carouselInner = document.createElement('div');
+    carouselInner.classList.add('carousel-inner');
+
+    // Create carousel items
+    for (let i = 1; i <= 3; i++) {
+      const carouselItem = document.createElement('div');
+      carouselItem.classList.add('carousel-item');
+      if (i === 1) {
+        carouselItem.classList.add('active');
+      }
+
+      const img = document.createElement('img');
+      img.src = 'http://localhost:5000/images/h' + i + '.jpg';
+      img.classList.add('d-block',  "card-img");
+      img.alt = '...';
+      carouselItem.appendChild(img);
+      carouselInner.appendChild(carouselItem);
+    }
+
+    // Create previous button
+    const prevButton = document.createElement('button');
+    prevButton.classList.add('carousel-control-prev');
+    prevButton.type = 'button';
+    prevButton.setAttribute('data-bs-target', '#carouselExample');
+    prevButton.setAttribute('data-bs-slide', 'prev');
+
+    const prevIcon = document.createElement('span');
+    prevIcon.classList.add('carousel-control-prev-icon');
+    prevIcon.setAttribute('aria-hidden', 'true');
+
+    const prevText = document.createElement('span');
+    prevText.classList.add('visually-hidden');
+    prevText.textContent = 'Previous';
+
+    prevButton.appendChild(prevIcon);
+    prevButton.appendChild(prevText);
+
+    // Create next button
+    const nextButton = document.createElement('button');
+    nextButton.classList.add('carousel-control-next');
+    nextButton.type = 'button';
+    nextButton.setAttribute('data-bs-target', '#carouselExample');
+    nextButton.setAttribute('data-bs-slide', 'next');
+
+    const nextIcon = document.createElement('span');
+    nextIcon.classList.add('carousel-control-next-icon');
+    nextIcon.setAttribute('aria-hidden', 'true');
+
+    const nextText = document.createElement('span');
+    nextText.classList.add('visually-hidden');
+    nextText.textContent = 'Next';
+
+    nextButton.appendChild(nextIcon);
+    nextButton.appendChild(nextText);
+
+    // Append elements to the main container
+    carouselContainer.appendChild(carouselInner);
+    carouselContainer.appendChild(prevButton);
+    carouselContainer.appendChild(nextButton);
+
+    // Add the entire carousel to the .img-container
+    const imgContainer = document.querySelector('.img-container');
+    imgContainer.appendChild(carouselContainer);
+
+  </script>
+</body>
+
+</html>

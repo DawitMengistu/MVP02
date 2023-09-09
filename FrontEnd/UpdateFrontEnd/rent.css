@@ -1,0 +1,95 @@
+:root {
+    --border-main: #EBEAEA;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.logo-nav-con {
+    height: 80px;
+    background-color: white;
+    border-bottom: solid 2px var(--border-main);
+}
+
+.house-type-con {
+    display: grid;
+    grid-template-columns: repeat(9, 120px);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.filter-option-con {
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 9px 10px -10px rgba(0,0,0,0.27);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.filter-icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.filter-btn {
+    /* padding: 10px; */
+    transition: all 150ms;
+    padding: 13px 0;
+}
+.type-img {
+    width: 30px;
+    color: green;
+}
+
+
+.type-info {
+    margin: 0;
+    margin-top: 9px;
+}
+.room-info {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+
+
+
+.filter-btn:hover {
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.focused{
+    background-color: rgb(220, 220, 220);
+}
+
+.price-range-con {
+    display: grid;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.price-range {
+    width: 240px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+    border-color: black;
+}
+
+.price-value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
