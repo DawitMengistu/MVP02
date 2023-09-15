@@ -17,13 +17,34 @@
     </head>
 
     <body>
-        <h1>File Upload</h1>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" class="name">
-        </div>
+        <h1>Add to Listing</h1>
 
         <br>
+        <label for="type" class="label-dropdown">Rooms</label>
+                <select class="room">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="type" class="label-dropdown">type</label>
+                <select class="type">
+                    <option value="H">House</option>
+                    <option value="A">Apartment</option>
+                    <option value="C">Condominium</option>
+                    <option value="R">Realstate</option>
+                </select>
+                <label for="type" class="location label-dropdown">city</label>
+                <select class="city">
+                    <option value="addis">Addis Ababa</option>
+                    <option value="adama">Adama</option>
+                    <option value="jimma">Jimma</option>
+                    <option value="bishoftu">Bishoftu</option>
+                </select>
+
+                <label for="price">price</label>
+                <input type="text" name="price" class="price">
         <form id="uploadForm" enctype="multipart/form-data">
             <input type="file" name="files[]" class="fileInput" multiple>
             <input type="button" class="submit-btn" value="Upload">

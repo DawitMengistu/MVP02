@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use('/users', usersRoutes);
 
 app.use('/images', express.static("images"));
+app.use('/routes/uploads/', express.static("routes/uploads"));
 
 app.get('/', (req, res)=> {
     

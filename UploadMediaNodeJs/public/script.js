@@ -4,9 +4,20 @@ const fileInput = document.querySelector(".fileInput")
 
 submitBtn.addEventListener("click", (e)=>{
     e.preventDefault();
+
+  let cityData = document.querySelector(".city").value;
+  let typeData = document.querySelector(".type").value;
+  let roomData = document.querySelector(".room").value;
+  let price = document.querySelector(".price").value;
+
+
+  console.log(price)
+
     if (fileInput.files.length > 0) {
         fileName = fileInput.files[0].name;
     }
+
+
     const data = [
         {
             img1: "http://localhost:5000/images/a1.jpg",
@@ -48,13 +59,27 @@ submitBtn.addEventListener("click", (e)=>{
     //     console.error("Fetch error:", error);
     //   });
 
-  fetch('http://localhost:5000/users/upload', {
+    let url = "http://localhost:5000/users/upload/?";
+
+    url += "price=" + price + "&city=" + cityData + "&type=" + typeData + "&room=" + roomData;
+    
+  fetch(url, {
     method: 'POST',
     body: formData
   })
   .then(response => response.text())
   .then(data => {
-    console.log(data, "<-----------");
+    fetch("http://localhost:3001/", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: "",
+            }).then(response => response.json())
+                .then(data => {
+                    window.location.replace(data);
+                })
+                .catch(error => console.error(error));
   })
   .catch(error => {
     console.error('Error uploading files:', error);
